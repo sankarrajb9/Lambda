@@ -18,7 +18,7 @@ exports.handler = (event, context, callback) => {
 
     console.log('The number of SAMs to show: ' + samCount);
     console.log('Multiplier to apply to SAMs: ' + samMultiplier);
-    console.log('Total number of SAMs to show: ' + totalSAMs);
+    console.log('Total number of vikson to show: ' + totalSAMs);
 
     callback(null, {
         "statusCode": 200,
