@@ -1,0 +1,12 @@
+version: 0.0
+Resources:
+  - helloworld:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: "helloworld"
+        Alias: "helloworld"
+        CurrentVersion: "1"
+        TargetVersion: "2"
+Hooks:
+    - BeforeAllowTraffic: "LambdaFunctionToValidateBeforeTrafficShift"
+    - AfterAllowTraffic: "LambdaFunctionToValidateAfterTrafficShift"
