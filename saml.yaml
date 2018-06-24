@@ -17,6 +17,7 @@ Resources:
                 Variables:
                     SAM_MULTIPLIER: !Ref SamMultipler
                     ORIGIN_URL: !Ref OriginUrl
+                    DBDYNAMO: !Ref myDynamoDBTable
             Events:
               GetResource:
                 Type: Api
