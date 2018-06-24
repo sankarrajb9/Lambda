@@ -64,7 +64,7 @@ Resources:
 Transform:
   Name: 'AWS::Include'
   Parameters:
-    Location: 'saml.yaml'
+    Location: 's3://awscodepipeline-vikson/saml.yaml'
 
 Outputs:
   TableName:
