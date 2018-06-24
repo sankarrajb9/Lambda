@@ -8,6 +8,7 @@ Description: 'AWS CloudFormation Sample Template DynamoDB_Table: This template d
 Parameters:
   HashKeyElementName:
     Description: HashType PrimaryKey Name
+    Default: id
     Type: String
     AllowedPattern: '[a-zA-Z0-9]*'
     MinLength: '1'
