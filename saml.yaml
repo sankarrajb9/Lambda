@@ -1,11 +1,13 @@
 Transform: 'AWS::Serverless-2016-10-31'
-#Parameters:
-#    SamMultipler:
-#        Description: "SAM multiplier. Make this really big to have a party :)"
-#        Type: "String"
-#    OriginUrl:
-#        Description: "The origin url to allow CORS requests from. This will be the base URL of your static SAM website."
-#        Type: "String"
+Parameters:
+    SamMultipler:
+        Description: "SAM multiplier. Make this really big to have a party :)"
+        Type: "String"
+        Default: "2"
+    OriginUrl:
+        Description: "The origin url to allow CORS requests from. This will be the base URL of your static SAM website."
+        Type: "String"
+        Default: ""
 Resources:
     GetSAMPartyCount:
         Type: AWS::Serverless::Function
@@ -15,8 +17,8 @@ Resources:
             CodeUri: ./
             Environment:
                 Variables:
-#                    SAM_MULTIPLIER: !Ref SamMultipler
-#                    ORIGIN_URL: !Ref OriginUrl
+                    SAM_MULTIPLIER: !Ref SamMultipler
+                    ORIGIN_URL: !Ref OriginUrl
                     DBDYNAMO: !Ref myDynamoDBTable
             Events:
               GetResource:
