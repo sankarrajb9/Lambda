@@ -60,7 +60,12 @@ Resources:
         WriteCapacityUnits: !Ref 'WriteCapacityUnits'
 #      putitem:
 #        - Firstname: vikas
-    
+
+Transform:
+  Name: 'AWS::Include'
+  Parameters:
+    Location: 'saml.yaml'
+
 Outputs:
   TableName:
     Value: !Ref 'myDynamoDBTable'
